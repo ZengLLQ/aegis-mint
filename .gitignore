@@ -1,0 +1,15 @@
+# Foundry
+out/
+cache/
+broadcast/
+
+# Environment
+.env
+.env.*
+
+# System / IDE
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.bak
