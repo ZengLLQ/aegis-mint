@@ -22,7 +22,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install Vyper 0.4.3
-        run: pip install vyper==0.4.3
+        run: |
+          pip install vyper==0.4.3
+          sudo ln -sf $(which vyper) /usr/local/bin/vyper || true
 
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1

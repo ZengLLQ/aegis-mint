@@ -446,7 +446,7 @@ contract AegisMintTest is Test {
         assertEq(redemptionEngine.base_rate(), 500);
 
         // 6. Time warp decays base rate: 24h = 2 half-lives -> 500 / 4 = 125 bps
-        uint256 currentT = block.timestamp;
+        uint256 currentT = vm.getBlockTimestamp();
         vm.warp(currentT + 86400);
         assertEq(redemptionEngine.get_decayed_base_rate(), 125);
 
